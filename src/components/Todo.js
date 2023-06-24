@@ -43,7 +43,7 @@ const Todo = ({
           onClick={() => completeTodo(todo.id)}
           className="todo"
         >
-          {todo.text}
+          {todo.title}
         </div>
         <div className="icons">
           <RiCheckboxCircleLine

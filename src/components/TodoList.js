@@ -5,6 +5,14 @@ import { useEffect } from "react";
 
 function TodoList() {
   const [todos, setTodos] = useState([]);
+  const get = async () => {
+    const response = await fetch("https://todo-api-h8ov.onrender.com/api");
+    const responseJson = await response.json();
+    setTodos(responseJson.data);
+  };
+  useEffect(() => {
+    get();
+  }, []);
 
   useEffect(() => {
     console.log(todos);
