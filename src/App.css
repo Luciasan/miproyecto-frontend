@@ -152,17 +152,24 @@ h1 {
 .description {
   display: flex;
 }
-@media screen, (max-width: 768px) {
+@media screen and (max-width: 768px) {
   body {
-    background-attachment: fixed;
+    display: flexbox;
+    min-height: 100vh;
+    background: (0deg, rgb(250, 222, 232) 0%, rgb(167, 169, 192) 100%);
   }
 }
-@media screen, (min-width: 600px) {
+@media screen and (min-width: 500px) {
   body {
-    background-attachment: fixed;
+    display: flexbox;
+    min-height: 100vh;
+    background: (0deg, rgb(109, 78, 88) 0%, rgb(73, 76, 107) 100%);
   }
-  .estiloreponsive {
-    float: right;
-    padding-left: 0%;
+}
+@media screen and (max-width: 799px) {
+  .todo-container {
+    display: flex;
+    flex-direction: row;
+    position: center;
   }
 }
