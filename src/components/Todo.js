@@ -33,17 +33,14 @@ const Todo = ({
 
   return todos.map((todo, index) => (
     // <div>
-    <div
-      className={todo.isComplete ? "todo-row complete" : "todo-row"}
-      key={index}
-    >
+    <div className={todo.isDone ? "todo-row complete" : "todo-row"} key={index}>
       <div className="description">
         <div
           key={todo.id}
           onClick={() => completeTodo(todo.id)}
           className="todo"
         >
-          {todo.title}
+          {todo.title} <br /> {todo.create_at} <br /> {todo.update_at}{" "}
         </div>
         <div className="icons">
           <RiCheckboxCircleLine
@@ -62,7 +59,7 @@ const Todo = ({
             onClick={() =>
               setEdit({
                 id: todo.id,
-                value: todo.text,
+                value: todo.title,
                 description: todo.description,
               })
             }
